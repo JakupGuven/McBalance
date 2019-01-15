@@ -16,6 +16,7 @@ class ViewController: UIViewController, SKSceneDelegate, SKPhysicsContactDelegat
     var playerNode : SKSpriteNode!
     var gameScene : SKScene!
     let screenRect = UIScreen.main.bounds
+    var difficulty = 4.0
 
     override func viewDidLoad() {
         mainView.bounds = screenRect
@@ -44,7 +45,7 @@ class ViewController: UIViewController, SKSceneDelegate, SKPhysicsContactDelegat
         }
         
         if let accelerometerData = motionManager.accelerometerData {
-            scene.physicsWorld.gravity = CGVector(dx: accelerometerData.acceleration.y * -50, dy: accelerometerData.acceleration.x * 50)
+            scene.physicsWorld.gravity = CGVector(dx: accelerometerData.acceleration.x * difficulty, dy: accelerometerData.acceleration.y * difficulty)
         }
     }
     
