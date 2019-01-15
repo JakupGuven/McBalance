@@ -12,6 +12,7 @@
 		DBC7EDC221EE208300D9081A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC7EDC021EE208300D9081A /* Main.storyboard */; };
 		DBC7EDC421EE208400D9081A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC7EDC321EE208400D9081A /* Assets.xcassets */; };
 		DBC7EDC721EE208400D9081A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC7EDC521EE208400D9081A /* LaunchScreen.storyboard */; };
+		DBC7EDD121EE28CA00D9081A /* Green square.paint in Resources */ = {isa = PBXBuildFile; fileRef = DBC7EDD021EE28CA00D9081A /* Green square.paint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DBC7EDC321EE208400D9081A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC7EDC621EE208400D9081A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBC7EDC821EE208400D9081A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC7EDD021EE28CA00D9081A /* Green square.paint */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Green square.paint"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				DBC7EDBE21EE208300D9081A /* ViewController.swift */,
 				DBC7EDC021EE208300D9081A /* Main.storyboard */,
 				DBC7EDC321EE208400D9081A /* Assets.xcassets */,
+				DBC7EDD021EE28CA00D9081A /* Green square.paint */,
 				DBC7EDC521EE208400D9081A /* LaunchScreen.storyboard */,
 				DBC7EDC821EE208400D9081A /* Info.plist */,
 			);
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC7EDD121EE28CA00D9081A /* Green square.paint in Resources */,
 				DBC7EDC721EE208400D9081A /* LaunchScreen.storyboard in Resources */,
 				DBC7EDC421EE208400D9081A /* Assets.xcassets in Resources */,
 				DBC7EDC221EE208300D9081A /* Main.storyboard in Resources */,
@@ -282,15 +286,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 542NUBKUPD;
 				INFOPLIST_FILE = McBalance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.McApp.McBalance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,15 +307,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 542NUBKUPD;
 				INFOPLIST_FILE = McBalance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.McApp.McBalance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
