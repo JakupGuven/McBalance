@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import CoreMotion
+import CoreFoundation
 
 class ViewController: UIViewController, SKSceneDelegate, SKPhysicsContactDelegate{
     @IBOutlet var mainView: SKView!
@@ -23,6 +24,7 @@ class ViewController: UIViewController, SKSceneDelegate, SKPhysicsContactDelegat
         super.viewDidLoad()
         initGameScene()
         initPlayerNode()
+        initFoodNode()
         mainView.presentScene(gameScene)
         motionManager.startAccelerometerUpdates()
     }
@@ -57,10 +59,19 @@ class ViewController: UIViewController, SKSceneDelegate, SKPhysicsContactDelegat
     }
     
     func initPlayerNode(){
-        playerNode = SKSpriteNode(imageNamed: "green_square")
+        playerNode = SKSpriteNode(imageNamed: "small_green_square")
         playerNode.physicsBody = SKPhysicsBody(rectangleOf: playerNode.size)
         playerNode.physicsBody?.usesPreciseCollisionDetection = true
         gameScene.addChild(playerNode)
+    }
+    
+    func initFoodNode(){
+        let foodNode = SKSpriteNode(imageNamed: "small_yellow_square")
+        foodNode.physicsBody = SKPhysicsBody(rectangleOf: foodNode.size)
+        foodNode.physicsBody?.isDynamic = false
+        foodNode.position.x = CGFloat(Int.random(in: 0 ..< Int(gameScene.frame.width)))
+        foodNode.position.y = CGFloat(Int.random(in: 0 ..< Int(gameScene.frame.height)))
+        gameScene.addChild(foodNode)
     }
     
     //Sets a hard border around the frame of the game
